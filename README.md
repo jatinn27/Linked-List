@@ -18,7 +18,7 @@
     <tr>
       <td>1</td>
       <td>01-03-2024</td>
-      <td><a href="https://github.com/jatinn27/DSA_rev/blob/main/1-03-24/linklistbasic.cpp">Singly Linked List Insertion</a></td>
+      <td><a href="https://github.com/jatinn27/DSA_rev/blob/main/1-03-24/1_linklistbasicInsertion.cpp">Singly Linked List Insertion</a></td>
     </tr>
   </tbody>
 </table>
