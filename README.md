@@ -26,7 +26,7 @@
 <table>
   <thead>
     <tr>
-      <th>Day (Index)</th>
+      <th>Day</th>
       <th>Date</th>
       <th>Work</th>
     </tr>
