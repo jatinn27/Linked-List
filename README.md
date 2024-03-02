@@ -23,7 +23,7 @@
     <tr>
       <td>2</td>
       <td>02-03-2024</td>
-      <td><a href="2-03-24/1_insertAscendingsinglylinklist.cpp">Singly Linked List Insertion Ascending</a>
+      <td><a href="2-03-24/1_insertAscendingsinglylinklist.cpp">Singly Linked List Insertion Ascending</a><br>
       <a href="2-03-24/2_singlyListDeletion.cpp">Singly Linked List Deletion</a></td>
     </tr>
   </tbody>
