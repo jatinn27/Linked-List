@@ -26,6 +26,11 @@
       <td><a href="2-03-24/1_insertAscendingsinglylinklist.cpp">Singly Linked List Insertion Ascending</a><br>
       <a href="2-03-24/2_singlyListDeletion.cpp">Singly Linked List Deletion</a></td>
     </tr>
+    <tr>
+      <td>3</td>
+      <td>03-03-2024</td>
+      <td><a href="3-03-24/1_doublylist_Insertion.cpp">Doubly Linked List Insertion</a></td>
+    </tr>
   </tbody>
 </table>
 
