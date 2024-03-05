@@ -31,6 +31,12 @@
       <td>03-03-2024</td>
       <td><a href="3-03-24/1_doublylist_Insertion.cpp">Doubly Linked List Insertion</a></td>
     </tr>
+    <tr>
+      <td>4</td>
+      <td>04-03-2024</td>
+      <td><a href="4-03-24/1_doubly_insertionAscending.cpp">doubly Linked List Insertion Ascending</a><br>
+      <a href="4-03-24/2_doublyDeletion.cpp">doubly Linked List Deletion</a></td>
+    </tr>
   </tbody>
 </table>
 
