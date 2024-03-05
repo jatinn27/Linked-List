@@ -1,0 +1,64 @@
+// Reverse a linked list
+// https://www.geeksforgeeks.org/problems/reverse-a-linked-list/1
+
+// struct Node
+// {
+//     int data;
+//     struct Node *next;
+// }
+
+// iterative method
+class Solution
+{
+    public:
+    //Function to reverse a linked list.
+    struct Node* reverseList(struct Node *head)
+    {
+        Node* previous = NULL;
+        Node* current = head;
+        
+        while(current != NULL){
+            Node* forward = current ->next;
+            current ->next = previous;
+            previous = current;
+            current = forward;
+        }
+        
+        return previous;
+        
+        
+    }
+    
+};
+
+// recursive method
+class Solution
+{
+    public:
+    //Function to reverse a linked list.
+    struct Node* reverse(struct Node * current,struct Node * previous){
+        
+        if(current == NULL){
+            return previous;
+        }
+        Node * forward = current->next;
+        
+        current->next = previous;
+        
+        return reverse(forward,current);
+        
+    }
+    struct Node* reverseList(struct Node *head)
+    {
+        if(head == NULL){
+            return NULL;
+        }
+        Node * current = head;
+        Node * previous = NULL;
+        
+        return reverse(head,NULL);
+        
+        
+    }
+    
+};
