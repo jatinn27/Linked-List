@@ -37,6 +37,14 @@
       <td><a href="4-03-24/1_doubly_insertionAscending.cpp">doubly Linked List Insertion Ascending</a><br>
       <a href="4-03-24/2_doublyDeletion.cpp">doubly Linked List Deletion</a></td>
     </tr>
+    <tr>
+      <td>5</td>
+      <td>05-03-2024</td>
+      <td><a href="5-03-24/1_deletionByValue.cpp">Deletion_by_value doubly List</a><br>
+      <a href="5-03-24/2_Reverse_linkedlist.txt">Reverse a linked list</a><br>
+      <a href="5-03-24/2_Reverse_linkedlist.txt">Finding middle element in a linked list</a><br>
+      <a href="5-03-24/4_Reverse_List_in_groups_of_given_size.txt">Reverse a Linked List in groups of given size</a></td>
+    </tr>
   </tbody>
 </table>
 
