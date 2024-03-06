@@ -1,0 +1,45 @@
+// Check If Circular Linked List
+// https://www.geeksforgeeks.org/problems/circular-linked-list/1
+
+// 1st->Method
+
+bool isCircular(Node *head)
+{
+    if (head == NULL)
+    {
+        return true;
+    }
+    Node *temp = head;
+    do
+    {
+        if (temp->next == NULL)
+        {
+            return false;
+        }
+        temp = temp->next;
+
+    } while (temp != head);
+
+    return true;
+}
+
+// 2nd->Method (Two pointer)
+
+bool isCircular(Node *head)
+{
+    if(head == NULL){
+        return true;
+    }
+    Node * slow = head;
+    Node * fast = head->next;
+   
+    while(fast!= NULL && fast->next != NULL){
+       if(slow == fast){
+           return true;
+       }
+       slow = slow->next ;
+       fast = fast->next->next ;
+    }
+   
+    return false;
+}
