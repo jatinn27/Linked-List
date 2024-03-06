@@ -45,6 +45,14 @@
       <a href="5-03-24/2_Reverse_linkedlist.txt">Finding middle element in a linked list</a><br>
       <a href="5-03-24/4_Reverse_List_in_groups_of_given_size.txt">Reverse a Linked List in groups of given size</a></td>
     </tr>
+    <tr>
+      <td>6</td>
+      <td>06-03-2024</td>
+      <td><a href="6-03-24/1_middle_of_List.txt">Finding middle element in a linked list</a><br>
+      <a href="6-03-24/2_Check_If_Circular_List.txt">Check If Circular Linked List</a><br>
+      <a href="6-03-24/3_Detect_loop_inList.txt">Detect Loop in linked list</a><br>
+      </td>
+    </tr>
   </tbody>
 </table>
 
