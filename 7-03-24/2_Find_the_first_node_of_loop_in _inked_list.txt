@@ -1,0 +1,37 @@
+// Find the first node of loop in linked list
+// https://www.geeksforgeeks.org/problems/find-the-first-node-of-loop-in-linked-list--170645/1
+
+class Solution
+{
+    public:
+     //Function to find first node if the linked list has a loop.
+    int findFirstNode(Node* head)
+    {
+        Node* slow = head;
+        Node* fast = head;
+        
+        while(fast != NULL){
+            fast = fast->next;
+            if(fast!=NULL){
+                fast = fast ->next;
+                slow = slow->next;
+            }
+            
+            if(fast == slow ){
+                break;
+            }
+        }
+        
+        if(fast!= slow){
+            return -1;
+        }
+        
+        slow = head;                        // how ? its proof!!!!!!!!!!!!!!!!!!!!!!
+        while(fast!=slow){
+            slow = slow->next;
+            fast = fast->next;
+        }
+        
+        return slow->data;
+    }
+};

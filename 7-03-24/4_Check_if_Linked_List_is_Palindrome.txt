@@ -1,0 +1,80 @@
+// Check if Linked List is Palindrome
+// https://www.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1
+
+// 1st- Method (Brute force may be)
+#include <vector>
+
+class Solution{
+  public:
+    //Function to check whether the list is palindrome.
+    bool isPalindrome(Node *head)
+    {
+        vector<int> arr;
+        Node* temp =head;
+        
+        while(temp != NULL){
+            arr.push_back(temp->data);
+            temp = temp->next;
+        }
+        
+        int start = 0;
+        int end = arr.size()-1;
+        
+        while(start<= end){
+            if(arr[start]!= arr[end]){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        
+        return true;
+    }
+};
+
+
+// 2nd - Method (reverselist from mid and then compare)
+
+class Solution{
+  public:
+    Node* reverseList(Node* head){
+        Node* prev = NULL;
+        Node* current = head;
+        
+        while(current!=NULL){
+            Node* forward = current->next;
+            current->next = prev;
+            prev = current;
+            current = forward;
+        }
+        
+        return prev;
+    }
+    bool isPalindrome(Node *head)
+    {
+        Node* temp =head;
+        Node * slow = head;
+        Node * fast = head->next;
+        
+        while(fast != NULL){
+            fast = fast ->next;
+            if(fast!=NULL){
+                fast = fast ->next;
+                slow = slow->next;
+            }
+        }
+        
+        Node* head1 = reverseList(slow->next);
+        Node* temp1 = head1;
+        
+        while(temp != head1 && temp1 != NULL){
+            if(temp->data != temp1->data){
+                return false;
+            }
+            temp = temp->next;
+            temp1 = temp1->next;
+        }
+        
+        return true;
+    }
+};

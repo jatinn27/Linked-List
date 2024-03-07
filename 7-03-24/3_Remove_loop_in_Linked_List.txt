@@ -1,0 +1,41 @@
+// Remove loop in Linked List
+// https://www.geeksforgeeks.org/problems/remove-loop-in-linked-list/1
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+class Solution
+{
+    public:
+    //Function to remove a loop in the linked list.
+    void removeLoop(Node* head)
+    {
+        Node * slow = head;
+        Node * fast = head;
+        
+        while(fast!= NULL){
+            fast = fast ->next;
+            if(fast!=NULL){
+                fast = fast ->next;
+                slow = slow->next;
+            }
+            
+            if(fast == slow){
+                break;
+            }
+        }
+        
+        if(fast == NULL || fast->next == NULL){
+            return ;
+        }
+        
+        Node* prev = fast;
+        
+        slow = head;
+        
+        while(slow!=fast){
+            prev = fast;
+            fast = fast->next;
+            slow = slow->next;
+        }
+        
+        prev ->next = NULL;
+    }
+};
