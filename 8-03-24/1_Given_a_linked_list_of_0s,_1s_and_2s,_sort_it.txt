@@ -1,0 +1,75 @@
+// Given a linked list of 0s, 1s and 2s, sort it
+// https://www.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1
+
+class Solution
+{
+    public:
+    //Function to sort a linked list of 0s, 1s and 2s.
+    Node* segregate(Node *head) {
+        
+        Node* oneHead = new Node(-1);
+        Node* oneTail= oneHead;
+        
+        Node* twoHead = new Node(-1);
+        Node* twoTail= twoHead;
+        
+        Node* zeroHead = new Node(-1);
+        Node* zeroTail= zeroHead;
+        
+        Node* current = head;
+        
+        while(current!= NULL){
+            if(current->data == 0){
+                Node* temp = current;
+                current = current->next;
+                temp->next = NULL;
+                
+                zeroTail->next = temp;
+                zeroTail = temp;
+            }else if(current->data == 1){
+                Node* temp = current;
+                current = current->next;
+                temp->next = NULL;
+                
+                oneTail->next = temp;
+                oneTail = temp;
+            }else if(current->data == 2){
+                Node* temp = current;
+                current = current->next;
+                temp->next = NULL;
+                
+                twoTail->next = temp;
+                twoTail = temp;
+            }
+        }
+        
+        
+        Node* temp1 = oneHead;
+        oneHead = oneHead->next;
+        temp1->next = NULL;
+        delete temp1;
+        Node* temp2 = twoHead;
+        twoHead = twoHead->next;
+        temp2->next = NULL;
+        delete temp2;
+        
+        if(oneHead!= NULL){
+            zeroTail->next = oneHead;
+            if(twoHead!= NULL){
+                oneTail->next = twoHead;
+            }
+        }else{
+            zeroTail->next = twoHead;
+        }
+        
+        Node* temp3 = zeroHead;
+        zeroHead = zeroHead->next;
+        temp3->next = NULL;
+        delete temp3;
+        
+        
+        return zeroHead;
+        
+        
+    }
+};

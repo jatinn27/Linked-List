@@ -1,0 +1,85 @@
+// Add two numbers represented by linked lists
+// https://www.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1
+
+class Solution
+{
+    public:
+    Node* reverseList(Node* head){
+        Node* current = head;
+        Node* prev = NULL;
+        Node* forward;
+        
+        while(current!= NULL){
+            forward = current->next;
+            current->next = prev;
+            prev = current;
+            current = forward;
+        }
+        
+        return prev;
+    }
+    struct Node* addTwoLists(struct Node* first, struct Node* second)
+    {
+        Node*firstHead = reverseList(first);
+        Node*secondHead = reverseList(second);
+        
+        Node* temp1 = firstHead;
+        Node* temp2 = secondHead;
+        Node* resHead = NULL;
+        Node* resTail = NULL;
+        int carry =0;
+        while(temp1!= NULL && temp2!= NULL){
+            int sum = temp1->data + temp2->data + carry;
+            carry = sum /10;
+            
+            Node* newnode= new Node( sum % 10);
+            
+            if(resHead== NULL){
+                resHead = newnode;
+                resTail = newnode;
+            }else{
+                resTail->next = newnode;
+                resTail = newnode;
+            }
+            
+            temp1 = temp1->next ;
+            temp2 = temp2->next ;
+        }
+        
+        while(temp1 != NULL){
+            int sum = temp1->data  + carry;
+            carry = sum /10;
+            
+            Node* newnode= new Node( sum % 10);
+            
+            resTail->next = newnode;
+            resTail = newnode;
+            
+            temp1 = temp1->next ;
+        }
+        
+        while(temp2 != NULL){
+            int sum = temp2->data + carry;
+            carry = sum /10;
+            
+            Node* newnode= new Node( sum % 10);
+            
+            resTail->next = newnode;
+            resTail = newnode;
+            
+            temp2 = temp2->next ;
+        }
+        
+        while(carry!= 0){
+            int sum = carry;
+            carry = sum /10;
+            Node* newnode= new Node( sum % 10);
+            
+            resTail->next = newnode;
+            resTail = newnode;
+        }
+        
+        return reverseList(resHead);
+    
+    }
+};
