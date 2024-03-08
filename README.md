@@ -63,6 +63,13 @@
         <a href="7-03-24/5_Remove_duplicate_element_from_sorted_Linked_List.txt">Remove duplicate element from sorted Linked List</a><br>
       </td>
     </tr>
+    <tr>
+      <td>7</td>
+      <td>08-03-2024</td>
+      <td><a href="8-03-24/1_Given_a_linked_list_of_0s%2C_1s_and_2s%2C_sort_it.txt">Given a linked list of 0s, 1s and 2s, sort it</a><br>
+      <a href="8-03-24/2_Add_two_numbers_represented_by_linked_lists.txt">Add two numbers represented by linked lists</a><br>
+      </td>
+    </tr>
   </tbody>
 </table>
 
