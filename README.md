@@ -53,6 +53,16 @@
       <a href="6-03-24/3_Detect_loop_inList.txt">Detect Loop in linked list</a><br>
       </td>
     </tr>
+    <tr>
+      <td>7</td>
+      <td>07-03-2024</td>
+      <td><a href="7-03-24/1_Detect_Loop_in_List.txt">Detect Loop in List</a><br>
+      <a href="7-03-24/2_Find_the_first_node_of_loop_in%20_inked_list.txt">Find the first node of loop in linked list</a><br>
+      <a href="7-03-24/3_Remove_loop_in_Linked_List.txt">Remove loop in Linked List</a><br>
+        <a href="7-03-24/4_Check_if_Linked_List_is_Palindrome.txt">Check if Linked List is Palindrome</a><br>
+        <a href="7-03-24/5_Remove_duplicate_element_from_sorted_Linked_List.txt">Remove duplicate element from sorted Linked List</a><br>
+      </td>
+    </tr>
   </tbody>
 </table>
 
