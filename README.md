@@ -64,10 +64,17 @@
       </td>
     </tr>
     <tr>
-      <td>7</td>
+      <td>8</td>
       <td>08-03-2024</td>
       <td><a href="8-03-24/1_Given_a_linked_list_of_0s%2C_1s_and_2s%2C_sort_it.txt">Given a linked list of 0s, 1s and 2s, sort it</a><br>
       <a href="8-03-24/2_Add_two_numbers_represented_by_linked_lists.txt">Add two numbers represented by linked lists</a><br>
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>09-03-2024</td>
+      <td><a href="9-03-24/1_Delete_N_nodes_after_M_nodes_of_a_linked_list.txt">Delete N nodes after M nodes of a linked list</a><br>
+      <a href="9-03-24/2_Merge_Two_Sorted_Lists.txt">Merge Two Sorted Lists</a><br>
       </td>
     </tr>
   </tbody>
