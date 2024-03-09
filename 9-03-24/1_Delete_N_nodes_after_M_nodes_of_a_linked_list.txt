@@ -1,0 +1,43 @@
+// Delete N nodes after M nodes of a linked list
+// https://www.geeksforgeeks.org/problems/delete-n-nodes-after-m-nodes-of-a-linked-list/1
+
+class Solution
+{
+    public:
+    void linkdelete(struct Node  *head, int M, int N)
+    {
+        if(head == NULL || M<=0 || N<=0){
+            return;
+        }   
+        
+        Node * current = head;
+        
+        for(int i= 0 ;i<M-1;i++){
+            if(current == NULL ){
+                return;
+            }
+            current = current->next;
+        }
+        
+        if(current == NULL){
+            return ;
+        }
+        
+        Node* forward = current->next;
+        
+        for(int i=0;i<N;i++){
+            if(forward == NULL ){
+                break;
+            }
+            Node* temp = forward;
+            forward = forward ->next;
+            delete temp;
+        }
+        
+        current->next = forward;
+        
+        linkdelete(forward,M,N);
+        
+    }
+};
+

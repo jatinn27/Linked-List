@@ -1,0 +1,62 @@
+// Merge Two Sorted Lists
+// https://leetcode.com/problems/merge-two-sorted-lists/
+
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        if(list1 == NULL){
+            return list2;
+        }
+
+        if(list2 == NULL){
+            return list1;
+        }
+
+        if(list2 == NULL && list1 == NULL){
+            return NULL;
+        }
+        ListNode* list1_IT = list1;
+        ListNode* list2_IT = list2;
+        ListNode* ansHead = NULL;
+        ListNode* ansTail = NULL;
+
+        while (list1_IT != NULL && list2_IT != NULL) {
+            if (list1_IT->val < list2_IT->val) {
+                ListNode* newnode = new ListNode(list1_IT->val);
+                if (ansHead == NULL) {
+                    ansHead = newnode;
+                    ansTail = newnode;
+                }
+                ansTail->next = newnode;
+                ansTail = newnode;
+                list1_IT = list1_IT ->next;
+            } else {
+                ListNode* newnode = new ListNode(list2_IT->val);
+                if (ansHead == NULL) {
+                    ansHead = newnode;
+                    ansTail = newnode;
+                }
+                ansTail->next = newnode;
+                ansTail = newnode;
+                list2_IT = list2_IT->next;
+            }
+            
+        }
+
+        while (list1_IT != NULL) {
+            ListNode* newnode = new ListNode(list1_IT->val);
+            ansTail->next = newnode;
+            ansTail = newnode;
+            list1_IT = list1_IT->next;
+        }
+
+        while (list2_IT != NULL) {
+            ListNode* newnode = new ListNode(list2_IT->val);
+            ansTail->next = newnode;
+            ansTail = newnode;
+            list2_IT = list2_IT ->next;
+        }
+
+        return ansHead;
+    }
+};
