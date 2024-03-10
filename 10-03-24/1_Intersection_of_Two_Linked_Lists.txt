@@ -1,0 +1,52 @@
+// Intersection of Two Linked Lists
+// https://leetcode.com/problems/intersection-of-two-linked-lists/
+
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode*tempA = headA;
+        ListNode* tempB = headB;
+
+        while(tempA->next!= NULL && tempB->next != NULL){
+            if(tempA == tempB){
+                return tempA;
+            }
+            tempA = tempA->next;
+            tempB = tempB->next;
+        }
+
+        if(tempA->next == 0){
+            // B list is larger. how much??
+            int blen = 0;
+
+            while(tempB->next != NULL){
+                blen ++;
+                tempB = tempB->next;
+            }
+
+            while(blen!=0){
+                headB = headB->next;
+                blen--;
+            }
+        }else{
+            int alen =0;
+            while(tempA->next != NULL){
+                alen++;
+                tempA = tempA->next;
+            }
+
+            while(alen!=0){
+                headA = headA->next;
+                alen--;
+            }
+        }
+
+
+        while(headA!=headB){
+            headA= headA->next;
+            headB = headB->next;
+        }
+
+        return headA;
+    }
+};
