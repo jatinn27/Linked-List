@@ -77,6 +77,20 @@
       <a href="9-03-24/2_Merge_Two_Sorted_Lists.txt">Merge Two Sorted Lists</a><br>
       </td>
     </tr>
+    <tr>
+      <td>10</td>
+      <td>10-03-2024</td>
+      <td><a href="10-03-24/1_Intersection_of_Two_Linked_Lists.txt">Intersection of two linked list</a><br>
+      <a href="10-03-24/2_mergeSortLinkedList.txt">Sort List</a><br>
+      </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>15-03-2024</td>
+      <td><a href="15-03-24/1_odd_even_linked_list.txt">Odd Even Linked List</a><br>
+      <a href="15-03-24/oddevenList.jpg">Odd Even Linked List pic</a><br>
+      </td>
+    </tr>
   </tbody>
 </table>
 
